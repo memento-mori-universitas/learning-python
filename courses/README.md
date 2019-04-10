@@ -1,3 +1,6 @@
 # Learning Python Project
       
-Any current or past courses are stored here
+## Udemy
+
+- [ ] https://www.udemy.com/the-complete-python-postgresql-developer-course/learn/v4/
+- [ ] https://www.udemy.com/complete-python-bootcamp/learn/v4/overview
