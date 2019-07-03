@@ -721,3 +721,22 @@ print(wackos_data)
 print(yacko.get_link_node().get_link_node().get_value())
 # has a penchant for hoarding snacks
 ```
+
+#### Linked List
+
+A linked list is one of the basic structures in Computer Science. A list is comprised of a series of nodes. The **head node** is the node at the beginning at the list. Each node contains data and a link or a pointer to the next node. The list is terminated when the node link is null. This is called the **tail node**. Linked lists can be unidirectional or bidirectional.
+
+![image](https://user-images.githubusercontent.com/1566236/60584577-a35ee200-9d5b-11e9-96d0-72af462f5cfe.png)
+
+Common operations found in linked lists are:
+
+- adding nodes
+- removing nodes
+- finding nodes
+- traversing nodes
+
+Removing and adding nodes require some maintance to the existence link list. One cannot just simply add or remove nodes. In the following example we want to remove node_b however we have to change the link of node_a beforehand.
+
+![image](https://user-images.githubusercontent.com/1566236/60585026-bfaf4e80-9d5c-11e9-96b1-c2c9ceaca60d.png)
+
+
