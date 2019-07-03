@@ -669,3 +669,55 @@ class LawFirm:
     
 d_and_p = LawFirm("Injury", ["Donelli", "Paderewski"])
 ```
+
+### Data Structures
+
+#### Nodes
+
+A node contains data and the link or *pointer* to another node.
+
+![image](https://user-images.githubusercontent.com/1566236/60555044-af6d8400-9d08-11e9-877b-efeef0318fa7.png)
+
+In summary nodes
+- Contain data, which can be a variety of data types
+- Contain links to other nodes. If a node has no links, or they are all null, you have reached the end of the path you were following.
+- Can be orphaned if there are no existing links to them
+
+Example of using Node
+
+```
+class Node:
+  def __init__(self, value, link_node=None):
+    self.value = value
+    self.link_node = link_node
+    
+  def set_link_node(self, link_node):
+    self.link_node = link_node
+    
+  def get_link_node(self):
+    return self.link_node
+  
+  def get_value(self):
+    return self.value
+
+# Add your code below:
+yacko = Node("likes to yak")
+wacko = Node("has a penchant for hoarding snacks")
+dot = Node("enjoys spending time in movie lots")
+
+yacko.set_link_node(dot)
+dot.set_link_node(wacko)
+
+# yacko -> dot -> wacko
+
+dots_data = yacko.get_link_node().get_value()
+print(dots_data)
+# enjoys spending time in movie lots
+
+wackos_data = dot.get_link_node().get_value()
+print(wackos_data)
+# has a penchant for hoarding snacks
+
+print(yacko.get_link_node().get_link_node().get_value())
+# has a penchant for hoarding snacks
+```
