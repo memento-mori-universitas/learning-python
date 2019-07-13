@@ -803,11 +803,6 @@ The last plate you put down becomes the first and only one that you can access. 
 
 ![image](https://user-images.githubusercontent.com/1566236/61175582-1cdaa980-a580-11e9-9dcf-93dd845978e7.png)
 
-![image](https://user-images.githubusercontent.com/1566236/61175586-282dd500-a580-11e9-8e44-292bd5bc26f2.png)
-
-![image](https://user-images.githubusercontent.com/1566236/61175592-367bf100-a580-11e9-8a2e-8180f301e353.png)
-
-
 Stacks can be implemented using a linked list.
 
 ![image](https://user-images.githubusercontent.com/1566236/61175627-e5b8c800-a580-11e9-93e7-ded0d19853d3.png)
@@ -815,12 +810,3 @@ Stacks can be implemented using a linked list.
 A constraint that may be placed on a stack is its size. This is done to limit and quantify the resources the data structure will take up when it is “full”.
 
 Attempting to push data onto an already full stack will result in a **stack overflow**. Similarly, if you attempt to pop data from an empty stack, it will result in a **stack underflow**.
-
-![image](https://user-images.githubusercontent.com/1566236/61175627-e5b8c800-a580-11e9-93e7-ded0d19853d3.png)
-
-
-
-
-
-
-
