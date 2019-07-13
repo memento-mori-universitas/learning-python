@@ -739,4 +739,88 @@ Removing and adding nodes require some maintance to the existence link list. One
 
 ![image](https://user-images.githubusercontent.com/1566236/60585026-bfaf4e80-9d5c-11e9-96b1-c2c9ceaca60d.png)
 
+```
+class Node:
+  def __init__(self, value, next_node=None):
+    self.value = value
+    self.next_node = next_node
+    
+  def get_value(self):
+    return self.value
+  
+  def get_next_node(self):
+    return self.next_node
+  
+  def set_next_node(self, next_node):
+    self.next_node = next_node
+
+class LinkedList:
+  def __init__(self, value=None):
+    self.head_node = Node(value)
+  
+  def get_head_node(self):
+    return self.head_node
+  
+  def insert_beginning(self, new_value):
+    new_node = Node(new_value)
+    new_node.set_next_node(self.head_node)
+    self.head_node = new_node
+    
+  def stringify_list(self):
+    string_list = ""
+    current_node = self.get_head_node()
+    while current_node:
+      if current_node.get_value() != None:
+        string_list += str(current_node.get_value()) + "\n"
+      current_node = current_node.get_next_node()
+    return string_list
+  
+  def remove_node(self, value_to_remove):
+    current_node = self.get_head_node()
+    if current_node.get_value() == value_to_remove:
+      self.head_node = current_node.get_next_node()
+    else:
+      while current_node:
+        next_node = current_node.get_next_node()
+        if next_node.get_value() == value_to_remove:
+          current_node.set_next_node(next_node.get_next_node())
+          current_node = None
+        else:
+          current_node = next_node
+```
+
+#### Stacks
+
+A stack is a data structure which contains ordered set of data
+
+A stack provides three methods:
+
+- Push: adds data to the "top" of the stack
+- Pop: returns and removes data of the "top" of the stack
+- Peek: returns data from the "top" of the stack without removing it
+
+The last plate you put down becomes the first and only one that you can access. This is the **Last In, First Out or LIFO**.
+
+![image](https://user-images.githubusercontent.com/1566236/61175582-1cdaa980-a580-11e9-9dcf-93dd845978e7.png)
+
+![image](https://user-images.githubusercontent.com/1566236/61175586-282dd500-a580-11e9-8e44-292bd5bc26f2.png)
+
+![image](https://user-images.githubusercontent.com/1566236/61175592-367bf100-a580-11e9-8a2e-8180f301e353.png)
+
+
+Stacks can be implemented using a linked list.
+
+![image](https://user-images.githubusercontent.com/1566236/61175627-e5b8c800-a580-11e9-93e7-ded0d19853d3.png)
+
+A constraint that may be placed on a stack is its size. This is done to limit and quantify the resources the data structure will take up when it is “full”.
+
+Attempting to push data onto an already full stack will result in a **stack overflow**. Similarly, if you attempt to pop data from an empty stack, it will result in a **stack underflow**.
+
+![image](https://user-images.githubusercontent.com/1566236/61175627-e5b8c800-a580-11e9-93e7-ded0d19853d3.png)
+
+
+
+
+
+
 
