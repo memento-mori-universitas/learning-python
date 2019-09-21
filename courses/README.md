@@ -810,3 +810,28 @@ Stacks can be implemented using a linked list.
 A constraint that may be placed on a stack is its size. This is done to limit and quantify the resources the data structure will take up when it is “full”.
 
 Attempting to push data onto an already full stack will result in a **stack overflow**. Similarly, if you attempt to pop data from an empty stack, it will result in a **stack underflow**.
+
+We can now create a Stack class with the following methods: push, pop & peek
+
+```
+from node import Node
+
+class Stack:
+  def __init__(self):
+    self.top_item = None
+  
+  # Define your push() and pop() methods below:
+  def push(self, value):
+    item = Node(value)
+    item.set_next_node(self.top_item)
+    self.top_item = item
+
+  def pop(self):
+    item_to_remove = self.top_item
+    self.top_item = item_to_remove.get_next_node()
+    return item_to_remove.get_value()
+  
+  def peek(self):
+    return self.top_item.get_value()
+  ```
+  
