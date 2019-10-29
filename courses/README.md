@@ -970,3 +970,20 @@ print("\n\nYou completed the game in {0} moves, and the optimal number of moves 
 
 #### Queues
 
+A queue is a data structure which contains an ordered set of data. A queue provides three methods of interacting:
+
+- Enqueue: adds data to the "back" or end of the queue
+- Dequeue: provides and removes datah from the "front" or beginning of the queue
+- Peek: reveals data from the "front" of the queue of the queue without removing it
+
+The first person in the queue is the first to be served. Queues are a First In, First Our or FIFO structure.
+
+![image](https://user-images.githubusercontent.com/1566236/67773280-d6776080-fa31-11e9-8122-3257ad541755.png)
+
+Queues can be implemented using **linked lists** as the data structure. The front of the queue is equivalent to the *head node* and the back of the queue is equivalent to the *tail node*. One last constraint that may be placed on the queue is the *length*. If the queue has a limit on the amount of data, it is considered a **bounded queue**.
+
+Similar to stacks, if we attemp to enqueue data from an already full stack, we get a *queue overflow* and if we dequeue data from an empty queue, we get a *queue underflow*.
+
+
+![image](https://user-images.githubusercontent.com/1566236/67773976-f78c8100-fa32-11e9-92b2-321f601cf3dd.png)
+
